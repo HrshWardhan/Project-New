@@ -1,0 +1,19 @@
+{% extends "Core/Base2.html" %}
+{% block head %}
+<title> IIT Bazaar
+</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <p>Welcome Back!</p>
+</div>
+<div class="container">
+  {% for Products in object_list %}
+<h5>{{ post.date|date:"Y-m-d"}}</h5>
+<h5>{{Products.name}}</h5>
+<button href="/Products/{{Products.id}}">Buy {{Products.Price}}</button>
+  {% endfor %}
+</div>
+{% endblock %}

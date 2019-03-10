@@ -1,0 +1,20 @@
+{% extends "Core/Base2.html" %}
+
+{% block head %}
+<title>
+    New Product
+</title>>
+{% endblock %}
+{% block body %}
+
+<h1> Welcome</h1>
+<p>What would you like to sell</p>
+
+<div class="container">
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+      <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "Core/Base.html" %} 
+{% block head %}
+<title> IIT Bazaar
+</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <p>Hey! Welcome to IIT bazaar</p>
+</div>
+<p>
+  Buy Sell your Products here
+</p>
+<p>
+  Earn 100 Respect points to get 10% off on each Purchase
+</p>
+<div class="container">
+  {% for Products in object_list %}
+  <img src="{{Products.image.url}}" >
+  <h5>Product name : {{Products.name}}</h5>
+
+<p>Product Price : {{Products.price}}</p>
+<a href="/Products/{{Products.id}}" class="btn btn-info" role="button">Buy</a>
+  {% endfor %}
+</div>
+
+{% endblock %}

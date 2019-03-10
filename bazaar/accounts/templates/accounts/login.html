@@ -1,0 +1,22 @@
+{% extends "Core/Base.html" %}
+
+{% block head %}
+<title>
+    Login
+</title>>
+{% endblock %}
+{% block body %}
+
+<h1> Welcome</h1>
+<p>You can login here</p>
+
+<div class="container">
+    <h2>Login</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+      <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    <a href="/admin/"> Staff Login</a>
+</div>
+{% endblock %}

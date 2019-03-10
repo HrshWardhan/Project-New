@@ -1,0 +1,18 @@
+{% extends "Core/Base.html" %} 
+{% block head %}
+<title> {{object.name}}
+</title>
+{% endblock %}
+
+{% block body %}
+<img src="{{ object.image.url }}" width="240">
+<div class="container">
+  <h2>Product Name ::{{ object.name }}</h2>
+  <p> Description :: {{object.description|safe|linebreaks}}</p>
+  <p>Date Offered :: {{object.date|date:"Y-m-d"}}</p>
+  <p>Product Price :: {{object.price}}</p>
+  <form method='GET' action='/Products/sold/'>
+    <button type="submit">Buy </button>
+  </form>
+</div>
+{% endblock %}

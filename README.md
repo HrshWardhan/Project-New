@@ -16,3 +16,8 @@ logout option
 admin login
 admin changing passwords
 
+admin credentials 
+id=super 
+password=something
+
+(it is a little difficult navigating kindly refer to urls.py in case not finding a view)
